@@ -1,35 +1,290 @@
+* {
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+html {
+  /* Set base font size for rem calculations */
+  font-size: 16px;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
 
 color: whitesmoke;    
 font-family: 'Montserat', Courier, monospace;
 background-color:darkslategray;
-
+}
 h1{
-    text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif
+  text-align: center;
 }
 
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 10%;
-}
-h2{
-    text-align: center;
-    text-decoration: underline;
-}
-p{
-    text-align: center; 
-
-}
-h3{
-    text-align: center;}
+/* Profile Image */
+.personalimage {
+  margin-bottom: 1.5rem;
 }
 
-footer{
-    text-align: center;
-    font-size: 0.8rem;
+.personalimage img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  border: 3px solid #48cadb;
+  border-radius: 50%; /* Circular profile image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Ensure proper image scaling */
+}
+
+/* Personal Details */
+.personaldetails {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.personaldetailitem {
+  font-size: 0.95rem; /* Fixed: was "16x" which is invalid */
+  font-weight: 500;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+}
+
+.label {
+  color: #4a5568;
+  font-weight: 400;
+}
+
+/* Skills Section */
+.skills-section {
+  width: 100%;
+}
+
+.skills-section h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  background-color: rgba(102, 126, 234, 0.1);
+  color: #4c51bf;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Main Content Area */
+.experience {
+  background-color: #ffffff;
+}
+
+/* Experience Items */
+.experienceitem {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.experienceitem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.experienceheader {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.experiencedate {
+  background-color: #edf2f7;
+  font-size: 0.9rem; /* Fixed: was "16x" which is invalid */
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  color: #4a5568;
+  white-space: nowrap;
+}
+
+.experiencetitle {
+  font-size: 1.1rem; /* Fixed: was "16x" which is invalid */
+  font-weight: 600;
+  color: #2d3748;
+  flex: 1;
+  min-width: 200px;
+}
+
+.experienceitemcontent {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.experienceitemcontent p {
+  margin: 0 0 1rem 0;
+}
+
+.experienceitemcontent ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.experienceitemcontent li {
+  margin-bottom: 0.25rem;
+}
+
+/* Education Section */
+.education-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+/* Footer Styling */
+.foot {
+  background-color: #48cadb;
+  color: white;
+  text-align: center;
+  border: none;
+}
+
+.footer-content p {
+  margin: 0.25rem 0;
+}
+
+/* Links */
+a {
+  color: #3182ce;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-color: #3182ce;
+}
+
+a:focus {
+  outline: 2px solid #3182ce;
+  outline-offset: 2px;
+}
+
+/* Educational Learning Notes Section */
+.learning-notes {
+  max-width: 1000px;
+  margin: 3rem auto 0;
+  padding: 2rem;
+  background-color: #ccc;
+  border-radius: 12px;
+  border-left: 4px solid #48cadb;
+}
+
+.learning-notes h2 {
+  color: #2d3748;
+  margin-top: 0;
+  text-align: center;
+}
+
+.note-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .note-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.note-item {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.note-item h3 {
+  color: #2d3748;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.note-item p {
+  margin: 0;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .content {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .box {
+    padding: 1rem;
+  }
+  
+  .experienceheader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .experiencetitle {
+    min-width: auto;
+  }
+  
+  .learning-notes {
+    padding: 1rem;
     margin-top: 2rem;
-    color: whitesmoke;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: white;
+    padding: 0;
+  }
+  
+  .wrapper {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "side"
+      "main"
+      "foot";
+    padding: 1rem;
+  }
+  
+  .box {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+  }
+  
+  .learning-notes {
+    display: none; /* Hide educational notes in print */
+  }
 }
